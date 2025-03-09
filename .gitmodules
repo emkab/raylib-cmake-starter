@@ -4,6 +4,3 @@
 [submodule "vendor/raygui"]
 	path = vendor/raygui
 	url = https://github.com/raysan5/raygui.git
-[submodule "vendor/angle"]
-	path = vendor/angle
-	url = https://chromium.googlesource.com/angle/angle

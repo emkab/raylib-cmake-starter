@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd vendor/angle
+gn gen out/Release --args='is_debug=false'
