@@ -19,7 +19,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE vendor/raygui/src)
 # Define path to ANGLE libraries if using ANGLE
 set(USE_ANGLE OFF)
 if (USE_ANGLE)
-    set(ANGLE_LIBRARY_DIR "${CMAKE_SOURCE_DIR}/vendor/angle/out/Release")
+    set(ANGLE_LIBRARY_DIR "${CMAKE_SOURCE_DIR}/libs")
 
     # Find ANGLE libraries
     find_library(ANGLE_GLESv2_LIBRARY libGLESv2.dylib PATHS ${ANGLE_LIBRARY_DIR})
