@@ -1,6 +1,9 @@
 #!/bin/bash
 
-git submodule update --init --recursive
+git submodule update --recursive --init vendor/raylib
+git submodule update --recursive --init vendor/raygui
+
+git submodule update --recommend-shallow --init vendor/angle
 
 if [ "$1" == "angle" ]; then
 	./bootstrap-angle
