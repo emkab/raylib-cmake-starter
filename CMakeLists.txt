@@ -27,14 +27,7 @@ if (USE_ANGLE)
 
     # Check if the libraries were found
     if (NOT ANGLE_GLESv2_LIBRARY OR NOT ANGLE_EGL_LIBRARY)
-        set(ANGLE_LIBRARY_DIR "${CMAKE_SOURCE_DIR}/libs")
-
-        # Check if the backup libraries were found
-        if (NOT ANGLE_GLESv2_LIBRARY OR NOT ANGLE_EGL_LIBRARY)
-            message(FATAL_ERROR "ANGLE libraries not found in ${ANGLE_LIBRARY_DIR}")
-        endif()
-    else()
-        message("--ANGLE libraries found in ANGLE submodule build--")
+        message(FATAL_ERROR "ANGLE libraries not found in ${ANGLE_LIBRARY_DIR}")
     endif()
 
     # Set runtime path for ANGLE libraries
