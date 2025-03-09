@@ -19,7 +19,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE vendor/raygui/src)
 # Define path to ANGLE libraries if using ANGLE
 set(USE_ANGLE OFF)
 if (USE_ANGLE)
-    set(ANGLE_LIBRARY_DIR "${CMAKE_SOURCE_DIR}/libs")
+    set(ANGLE_LIBRARY_DIR "${CMAKE_SOURCE_DIR}/vendor/angle/out/Release")
 
     # Find ANGLE libraries
     find_library(ANGLE_GLESv2_LIBRARY libGLESv2.dylib PATHS ${ANGLE_LIBRARY_DIR})
@@ -27,7 +27,14 @@ if (USE_ANGLE)
 
     # Check if the libraries were found
     if (NOT ANGLE_GLESv2_LIBRARY OR NOT ANGLE_EGL_LIBRARY)
-        message(FATAL_ERROR "ANGLE libraries not found in ${ANGLE_LIBRARY_DIR}")
+        set(ANGLE_LIBRARY_DIR "${CMAKE_SOURCE_DIR}/libs")
+
+        # Check if the backup libraries were found
+        if (NOT ANGLE_GLESv2_LIBRARY OR NOT ANGLE_EGL_LIBRARY)
+            message(FATAL_ERROR "ANGLE libraries not found in ${ANGLE_LIBRARY_DIR}")
+        endif()
+    else()
+        message("--ANGLE libraries found in ANGLE submodule build--")
     endif()
 
     # Set runtime path for ANGLE libraries
