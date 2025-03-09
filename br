@@ -1,4 +1,8 @@
 #!/bin/bash
 
-./b
-./r
+if [ "$1" == "angle" ]; then
+	./b angle
+	./r angle
+else 
+	./b
+	./r
