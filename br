@@ -6,3 +6,4 @@ if [ "$1" == "angle" ]; then
 else 
 	./b
 	./r
+fi
