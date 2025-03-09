@@ -2,3 +2,7 @@
 
 cd vendor/angle
 gn gen out/Release --args='is_debug=false'
+
+if [ -n "$1" ]; then
+	ninja -j 10 -k1 -C out/Release
+fi
