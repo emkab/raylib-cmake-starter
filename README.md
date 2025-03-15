@@ -27,7 +27,7 @@ find ./ -name libEGL.dylib
 
 4. run with ANGLE `./r angle`
 
-### Option 2 - Build ANGLE locally.
+### Option 2 - Build ANGLE locally
 ***DEPENDENCIES***
 
 * Apple Developer Command Line Tools (xcode) - On MacOS
