@@ -1,6 +1,6 @@
 # Raylib+ANGLE CMake Starter for C/C++
 
-This is a starter project for using [Raylib](https://www.raylib.com/) and ANGLE with C/C++ and CMake.
+This is a starter project for using [Raylib](https://www.raylib.com/) and [ANGLE](https://chromium.googlesource.com/angle/angle) with C/C++ and CMake.
 **WARNING: Only tested on MacOS**
 
 
