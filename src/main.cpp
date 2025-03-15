@@ -19,7 +19,7 @@ int main(void)
     bool checked = false;
 
     InitWindow(screenWidth, screenHeight, "Raylib CMake Starter");
-    SetTargetFPS(60); // Set our game to run at 60 frames-per-second
+    // SetTargetFPS(60); // Set our game to run at 60 frames-per-second
     SetWindowState(FLAG_WINDOW_RESIZABLE);
     //--------------------------------------------------------------------------------------
 
@@ -49,6 +49,7 @@ int main(void)
         GuiCheckBox((Rectangle){ 25, 290, 20, 20 }, "Check me", &checked);
 
         DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
+        DrawFPS(10, 10);
 
         EndDrawing();
         //----------------------------------------------------------------------------------
