@@ -42,4 +42,4 @@ find ./ -name libEGL.dylib
    
 3. Build with `./build-angle [Number of cores to build with]`
    
-5. Copy ANGLE dylibs to /libs - Run `./cp-angle-dylibs`
+5. Copy ANGLE dylibs to libs/ - Run `./cp-angle-dylibs`
