@@ -43,3 +43,5 @@ find ./ -name libEGL.dylib
 3. Build with `./build-angle [Number of cores to build with]`
    
 5. Copy ANGLE dylibs to libs/ - Run `./cp-angle-dylibs`
+
+Originally a fork of `grplyler/raylib-cmake-starter`, but I've decided to detach the repo since its distinct enough, and both repos are based on the same [article](https://medium.com/@grplyler/building-and-linking-googles-angle-with-raylib-on-macos-67b07cd380a3). Still many thanks to grplyler for the resources and original implementation. 
