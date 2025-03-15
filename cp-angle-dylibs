@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cp vendor/angle/out/Release/libEGL.dylib libs/libEGL.dylib
+cp vendor/angle/out/Release/libGLESv2.dylib libs/libGLESv2.dylib

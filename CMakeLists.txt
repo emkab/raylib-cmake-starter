@@ -1,11 +1,12 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(raylib-starter)
+project(raylib-starter CXX C)
 
 set(CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(vendor/raylib)
 
+file(GLOB_RECURSE SOURCES "src/*.c")
 file(GLOB_RECURSE SOURCES "src/*.cpp")
 add_executable(${PROJECT_NAME} ${SOURCES})
 
@@ -17,7 +18,6 @@ target_include_directories(${PROJECT_NAME} PRIVATE vendor/raygui/src)
 
 
 # Define path to ANGLE libraries if using ANGLE
-set(USE_ANGLE OFF)
 if (USE_ANGLE)
     set(ANGLE_LIBRARY_DIR "${CMAKE_SOURCE_DIR}/libs")
 
@@ -34,6 +34,9 @@ if (USE_ANGLE)
     set_target_properties(${PROJECT_NAME} PROPERTIES
         BUILD_RPATH ${ANGLE_LIBRARY_DIR}
     )
+
+    target_include_directories(${PROJECT_NAME} PUBLIC vendor/angle/include)
+    target_include_directories(raylib PUBLIC vendor/angle/include)
 endif()
 
 
