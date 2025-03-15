@@ -12,7 +12,7 @@ This is a starter project for using [Raylib](https://www.raylib.com/) and [ANGLE
 4. Run `./r`
 
 ## Building with Google ANGLE (10x more draw calls on Apple Silicon) (Only tested on MacOS)
-### Option 1 - Grab ANGLE dylibs from a Chrome installation
+### Option 1 - Grab ANGLE dylibs from a Google Chrome installation
 1. Grab ANGLE dylibs from Your Google Chrome installation
 
 ```
