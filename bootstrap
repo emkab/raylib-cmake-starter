@@ -1,7 +1,7 @@
 #!/bin/bash
 
 git submodule update --init --recursive vendor/raylib
-git submodule update --init --recursive vendor/raygui
+git submodule update --init --recursive vendor/clay
 
 git submodule update --recommend-shallow --init vendor/angle
 
