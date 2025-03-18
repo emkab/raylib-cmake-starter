@@ -15,7 +15,7 @@ add_subdirectory(vendor/raylib)
 file(GLOB_RECURSE SOURCES ${PROJECT_SOURCE_DIR}/src/*.c ${PROJECT_SOURCE_DIR}/src/*.cpp)
 add_executable(${PROJECT_NAME} ${SOURCES})
 
-target_include_directories(${PROJECT_NAME} PUBLIC vendor/clay)
+target_include_directories(${PROJECT_NAME} PUBLIC include)
 
 if(NOT MSVC)
   set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG}")
@@ -24,9 +24,6 @@ endif()
 
 # Add raylib include directory
 target_include_directories(${PROJECT_NAME} PRIVATE vendor/raylib/src)
-
-# Add raygui include directory
-target_include_directories(${PROJECT_NAME} PRIVATE vendor/raygui/src)
 
 
 # Define path to ANGLE libraries if using ANGLE
