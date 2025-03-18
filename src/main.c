@@ -60,6 +60,10 @@ int main()
 
     BeginDrawing();
     ClearBackground(BLACK);
+
+    // Write Raylib renders here.
+
+
     Clay_Raylib_Render(renderCommands, &fonts[0]);
     EndDrawing();
   }
