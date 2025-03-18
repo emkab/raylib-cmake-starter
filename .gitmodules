@@ -4,6 +4,3 @@
 [submodule "angle"]
 	path = vendor/angle
 	url = https://chromium.googlesource.com/angle/angle
-[submodule "vendor/clay"]
-	path = vendor/clay
-	url = https://github.com/nicbarker/clay
