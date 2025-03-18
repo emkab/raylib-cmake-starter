@@ -2,13 +2,25 @@ cmake_minimum_required(VERSION 3.16)
 
 project(raylib-starter CXX C)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_CXX_STANDARD 20)
+
+if(NOT MSVC)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -fno-omit-frame-pointer -g")
+endif()
 
 add_subdirectory(vendor/raylib)
 
-file(GLOB_RECURSE SOURCES "src/*.c")
-file(GLOB_RECURSE SOURCES "src/*.cpp")
+
+file(GLOB_RECURSE SOURCES ${PROJECT_SOURCE_DIR}/src/*.c ${PROJECT_SOURCE_DIR}/src/*.cpp)
 add_executable(${PROJECT_NAME} ${SOURCES})
+
+target_include_directories(${PROJECT_NAME} PUBLIC vendor/clay)
+
+if(NOT MSVC)
+  set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG}")
+  set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE}")
+endif()
 
 # Add raylib include directory
 target_include_directories(${PROJECT_NAME} PRIVATE vendor/raylib/src)
